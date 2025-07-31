@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Future in Humanities: A Career Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f8fc;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .nav-link {
+            @apply relative px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors duration-300 text-sm font-semibold;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background-color: #4f46e5;
+            border-radius: 50%;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top left, #e0e7ff, #f3e8ff);
+        }
+        .section-card {
+            @apply bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col;
+        }
+        .btn-primary {
+            @apply inline-block bg-indigo-600 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105;
+        }
+        .icon-wrapper {
+            @apply bg-indigo-100 text-indigo-600 rounded-xl p-4 inline-flex mb-5;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Fix for sticky header covering section titles */
+        main section[id] {
+            scroll-margin-top: 5rem; 
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <div class="bg-indigo-600 text-white p-2 rounded-lg">
+                    <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                </div>
+                <span class="text-2xl font-bold text-gray-800">Humanities Hub</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-6" id="nav-menu">
+                <a href="#why-humanities" class="nav-link">Why Humanities?</a>
+                <a href="#spotlight" class="nav-link">Career Spotlight</a>
+                <a href="#courses" class="nav-link">Top Courses</a>
+                <a href="#colleges" class="nav-link">Top Colleges</a>
+                <a href="#next-steps" class="nav-link">Next Steps</a>
+            </div>
+            <a href="#next-steps" class="hidden md:inline-block bg-gray-800 text-white font-semibold px-5 py-2 rounded-full text-sm hover:bg-gray-900 transition-colors">Get Started</a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-gray-200">
+            <a href="#why-humanities" class="block nav-link text-left">Why Humanities?</a>
+            <a href="#spotlight" class="block nav-link text-left">Career Spotlight</a>
+            <a href="#courses" class="block nav-link text-left">Top Courses</a>
+            <a href="#colleges" class="block nav-link text-left">Top Colleges</a>
+            <a href="#next-steps" class="block nav-link text-left">Next Steps</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <!-- Hero Section -->
+        <section id="hero" class="text-center py-20 md:py-28 hero-gradient rounded-3xl my-8 overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight tracking-tight">Unlock Your Future with Humanities</h1>
+                <p class="mt-6 text-lg text-gray-700 max-w-2xl mx-auto">
+                    Just finished your 12th boards? Discover how a degree in Arts & Humanities can launch you into exciting, creative, and impactful careers you'll be passionate about.
+                </p>
+                <div class="mt-10">
+                    <a href="#courses" class="btn-primary">Explore Career Paths</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Humanities? -->
+        <section id="why-humanities" class="py-16 fade-in">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <h2 class="text-4xl md:text-5xl font-bold">Why Humanities is a Superpower</h2>
+                <p class="mt-4 text-gray-600">It's more than just subjects—it's about building essential skills for any career in the 21st century.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="section-card text-center">
+                    <div class="icon-wrapper"><i data-lucide="brain-circuit"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Think Like a Pro</h3>
+                    <p class="text-gray-600">Learn to analyze complex problems, see patterns others miss, and build strong, persuasive arguments. This is a skill every top company looks for.</p>
+                </div>
+                <div class="section-card text-center">
+                    <div class="icon-wrapper"><i data-lucide="message-square-text"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Communicate with Impact</h3>
+                    <p class="text-gray-600">Master the art of storytelling. Learn to write and speak in a way that captures attention, changes minds, and gets your ideas across clearly.</p>
+                </div>
+                <div class="section-card text-center">
+                    <div class="icon-wrapper"><i data-lucide="users"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Understand People</h3>
+                    <p class="text-gray-600">Develop empathy and a deep understanding of human behavior, cultures, and societies. This is key to success in leadership, marketing, and more.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Career Spotlight Section -->
+        <section id="spotlight" class="py-16 fade-in">
+             <div class="text-center max-w-3xl mx-auto mb-14">
+                <h2 class="text-4xl md:text-5xl font-bold">Career Spotlight: Beyond the Obvious</h2>
+                <p class="mt-4 text-gray-600">Think humanities is just about teaching or research? Think again. Here are some cool, modern jobs where humanities grads excel.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="section-card">
+                    <h3 class="font-bold text-lg mb-2">UX Writer</h3>
+                    <p class="text-gray-600 text-sm mb-3 flex-grow">Craft the words you see in apps and websites. You'll use your understanding of language and psychology to make technology easier and more enjoyable for everyone.</p>
+                    <span class="text-xs font-medium bg-green-100 text-green-800 px-2 py-1 rounded-full self-start">Skills: Empathy, Clear Writing</span>
+                </div>
+                <div class="section-card">
+                    <h3 class="font-bold text-lg mb-2">Policy Analyst</h3>
+                    <p class="text-gray-600 text-sm mb-3 flex-grow">Work for the government or NGOs to research and improve our society. You'll use your critical thinking skills to help solve real-world problems.</p>
+                    <span class="text-xs font-medium bg-blue-100 text-blue-800 px-2 py-1 rounded-full self-start">Skills: Research, Analysis</span>
+                </div>
+                <div class="section-card">
+                    <h3 class="font-bold text-lg mb-2">Digital Marketer</h3>
+                    <p class="text-gray-600 text-sm mb-3 flex-grow">Use your understanding of culture and communication to create compelling online campaigns for brands. You'll tell stories that connect with people.</p>
+                    <span class="text-xs font-medium bg-purple-100 text-purple-800 px-2 py-1 rounded-full self-start">Skills: Creativity, Communication</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Undergraduate Courses -->
+        <section id="courses" class="py-16 fade-in">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <h2 class="text-4xl md:text-5xl font-bold">Find Your Perfect Course</h2>
+                <p class="mt-4 text-gray-600">These popular degrees are your launchpad to an amazing future.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Course Cards -->
+                <div class="section-card">
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-lg mb-2">B.A. (Hons) Political Science</h3>
+                        <p class="text-gray-600 text-sm mb-3">Understand how governments and societies work. Perfect for future policy makers, journalists, and civil servants.</p>
+                    </div>
+                    <span class="text-xs font-medium bg-blue-100 text-blue-800 px-2 py-1 rounded-full self-start">Leads to: UPSC, Policy Research</span>
+                </div>
+                <div class="section-card">
+                     <div class="flex-grow">
+                        <h3 class="font-bold text-lg mb-2">B.A. (Hons) English</h3>
+                        <p class="text-gray-600 text-sm mb-3">Dive into literature and master the English language. Great for careers in content, media, and publishing.</p>
+                    </div>
+                    <span class="text-xs font-medium bg-green-100 text-green-800 px-2 py-1 rounded-full self-start">Leads to: Content Writing, PR</span>
+                </div>
+                <div class="section-card">
+                     <div class="flex-grow">
+                        <h3 class="font-bold text-lg mb-2">B.A. (Hons) Economics</h3>
+                        <p class="text-gray-600 text-sm mb-3">Analyze how markets and economies function. Opens doors to finance, consulting, and data analysis.</p>
+                    </div>
+                    <span class="text-xs font-medium bg-purple-100 text-purple-800 px-2 py-1 rounded-full self-start">Leads to: Banking, Data Analysis</span>
+                </div>
+                <div class="section-card">
+                     <div class="flex-grow">
+                        <h3 class="font-bold text-lg mb-2">B.A. Journalism & Mass Comm.</h3>
+                        <p class="text-gray-600 text-sm mb-3">Learn to report news, create media content, and manage public relations. Your ticket to the media world.</p>
+                    </div>
+                    <span class="text-xs font-medium bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full self-start">Leads to: Journalism, Advertising</span>
+                </div>
+                <div class="section-card">
+                     <div class="flex-grow">
+                        <h3 class="font-bold text-lg mb-2">B.Des (Design)</h3>
+                        <p class="text-gray-600 text-sm mb-3">Unleash your creativity in fields like fashion, graphic, or interior design. For the visual storytellers.</p>
+                    </div>
+                    <span class="text-xs font-medium bg-red-100 text-red-800 px-2 py-1 rounded-full self-start">Leads to: Creative Industries</span>
+                </div>
+                <div class="section-card">
+                     <div class="flex-grow">
+                        <h3 class="font-bold text-lg mb-2">B.A. LL.B. (Integrated Law)</h3>
+                        <p class="text-gray-600 text-sm mb-3">Combine a humanities degree with law. A direct path to becoming a lawyer, judge, or legal advisor.</p>
+                    </div>
+                    <span class="text-xs font-medium bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full self-start">Leads to: Legal Profession</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Colleges -->
+        <section id="colleges" class="py-16 fade-in">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <h2 class="text-4xl md:text-5xl font-bold">Aim for the Best Colleges</h2>
+                <p class="mt-4 text-gray-600">Getting into a top college can shape your entire career. Here are some of the best in India.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="section-card">
+                    <h3 class="text-xl font-bold mb-4">Top Delhi University Colleges</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center"><i data-lucide="star" class="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0"></i><a href="https://www.hinducollege.ac.in/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors flex items-center">Hindu College <i data-lucide="arrow-up-right" class="w-3 h-3 ml-1 text-gray-400"></i></a></li>
+                        <li class="flex items-center"><i data-lucide="star" class="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0"></i><a href="http://www.ststephens.edu/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors flex items-center">St. Stephen’s College <i data-lucide="arrow-up-right" class="w-3 h-3 ml-1 text-gray-400"></i></a></li>
+                        <li class="flex items-center"><i data-lucide="star" class="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0"></i><a href="https://www.mirandahouse.ac.in/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors flex items-center">Miranda House <i data-lucide="arrow-up-right" class="w-3 h-3 ml-1 text-gray-400"></i></a></li>
+                        <li class="flex items-center"><i data-lucide="star" class="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0"></i><a href="https://lsr.edu.in/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors flex items-center">Lady Shri Ram College (LSR) <i data-lucide="arrow-up-right" class="w-3 h-3 ml-1 text-gray-400"></i></a></li>
+                        <li class="flex items-center"><i data-lucide="star" class="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0"></i><a href="https://www.hansrajcollege.ac.in/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors flex items-center">Hansraj College <i data-lucide="arrow-up-right" class="w-3 h-3 ml-1 text-gray-400"></i></a></li>
+                    </ul>
+                </div>
+                <div class="section-card">
+                    <h3 class="text-xl font-bold mb-4">Other Prestigious Institutions</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center"><i data-lucide="university" class="w-4 h-4 text-indigo-500 mr-2 flex-shrink-0"></i><a href="http://www.jaduniv.edu.in/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors flex items-center">Jadavpur University, Kolkata <i data-lucide="arrow-up-right" class="w-3 h-3 ml-1 text-gray-400"></i></a></li>
+                        <li class="flex items-center"><i data-lucide="university" class="w-4 h-4 text-indigo-500 mr-2 flex-shrink-0"></i><a href="https://xaviers.edu/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors flex items-center">St. Xavier's College, Mumbai <i data-lucide="arrow-up-right" class="w-3 h-3 ml-1 text-gray-400"></i></a></li>
+                        <li class="flex items-center"><i data-lucide="university" class="w-4 h-4 text-indigo-500 mr-2 flex-shrink-0"></i><a href="https://www.loyolacollege.edu/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors flex items-center">Loyola College, Chennai <i data-lucide="arrow-up-right" class="w-3 h-3 ml-1 text-gray-400"></i></a></li>
+                        <li class="flex items-center"><i data-lucide="university" class="w-4 h-4 text-indigo-500 mr-2 flex-shrink-0"></i><a href="https://christuniversity.in/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors flex items-center">Christ University, Bengaluru <i data-lucide="arrow-up-right" class="w-3 h-3 ml-1 text-gray-400"></i></a></li>
+                        <li class="flex items-center"><i data-lucide="university" class="w-4 h-4 text-indigo-500 mr-2 flex-shrink-0"></i><a href="https://www.siu.edu.in/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors flex items-center">Symbiosis, Pune <i data-lucide="arrow-up-right" class="w-3 h-3 ml-1 text-gray-400"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admissions & CUET Trends -->
+        <section id="admissions" class="py-16 fade-in">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <h2 class="text-4xl md:text-5xl font-bold">Cracking the Admissions Process</h2>
+                <p class="mt-4 text-gray-600">The CUET exam is your key to top universities. Here's what you need to know.</p>
+            </div>
+            <div class="section-card">
+                <h3 class="text-xl font-bold mb-4">CUET Score Goals (Based on 2025 Cutoffs)</h3>
+                <p class="text-gray-600 mb-6">With the release of the 2025 cutoffs, it's clear the competition for top colleges is intense. For premier DU colleges, scores for popular humanities courses are now calculated out of 1000. To be competitive, you should be aiming for **900+**.</p>
+                
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <h4 class="font-semibold text-gray-800 mb-3">Real 2025 First Round Cutoff Scores:</h4>
+                     <ul class="space-y-2 text-sm">
+                        <li class="flex justify-between items-center">
+                            <span><strong class="text-indigo-600">B.A. (Hons) Political Science</strong> at Hindu College:</span>
+                            <span class="font-bold text-gray-900 bg-indigo-100 px-2 py-1 rounded">950.58</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span><strong class="text-indigo-600">B.A. (Hons) English</strong> at St. Stephen's College:</span>
+                            <span class="font-bold text-gray-900 bg-indigo-100 px-2 py-1 rounded">926.92</span>
+                        </li>
+                         <li class="flex justify-between items-center">
+                            <span><strong class="text-indigo-600">B.A. (Hons) Psychology</strong> at LSR:</span>
+                            <span class="font-bold text-gray-900 bg-indigo-100 px-2 py-1 rounded">926.53</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-6 p-4 bg-indigo-50 rounded-lg border-l-4 border-indigo-500">
+                    <p class="font-semibold text-indigo-800">Key Takeaway:</p>
+                    <p class="text-indigo-700">Your Class 12th subjects and your CUET score are both crucial. Prepare well for both, and keep an eye on the official DU admission portal (<a href="https://admission.uod.ac.in/" target="_blank" rel="noopener noreferrer" class="font-semibold hover:underline">admission.uod.ac.in</a>) for all announcements.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Competitive Exams -->
+        <section id="exams" class="py-16 fade-in">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <h2 class="text-4xl md:text-5xl font-bold">Exams for Your Dream Career</h2>
+                <p class="mt-4 text-gray-600">Beyond college admissions, these exams can land you a great job.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="section-card">
+                    <div class="flex items-start space-x-4 flex-grow">
+                        <div class="icon-wrapper !p-4 flex-shrink-0"><i data-lucide="landmark"></i></div>
+                        <div>
+                            <h3 class="font-bold">UPSC Civil Services</h3>
+                            <p class="text-sm text-gray-600">The ultimate goal for many. Prepare for a career as an IAS, IPS, or IFS officer.</p>
+                        </div>
+                    </div>
+                    <a href="https://upsc.gov.in/" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-700 mt-4 self-start">Visit Website &rarr;</a>
+                </div>
+                 <div class="section-card">
+                    <div class="flex items-start space-x-4 flex-grow">
+                        <div class="icon-wrapper !p-4 flex-shrink-0"><i data-lucide="briefcase"></i></div>
+                        <div>
+                            <h3 class="font-bold">SSC & Banking Exams</h3>
+                            <p class="text-sm text-gray-600">For stable government jobs in various departments (SSC) and banks (IBPS).</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://ssc.gov.in/" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-700 mt-4 self-start">SSC Website &rarr;</a>
+                        <a href="https://www.ibps.in/" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-700 mt-4 self-start">IBPS Website &rarr;</a>
+                    </div>
+                </div>
+                <div class="section-card">
+                    <div class="flex items-start space-x-4 flex-grow">
+                        <div class="icon-wrapper !p-4 flex-shrink-0"><i data-lucide="scale"></i></div>
+                        <div>
+                            <h3 class="font-bold">Law Entrances (CLAT)</h3>
+                            <p class="text-sm text-gray-600">Your gateway to the top National Law Universities (NLUs) for a career in the legal field.</p>
+                        </div>
+                    </div>
+                    <a href="https://consortiumofnlus.ac.in/" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-700 mt-4 self-start">Visit Website &rarr;</a>
+                </div>
+                <div class="section-card">
+                    <div class="flex items-start space-x-4 flex-grow">
+                        <div class="icon-wrapper !p-4 flex-shrink-0"><i data-lucide="pencil-ruler"></i></div>
+                        <div>
+                            <h3 class="font-bold">Design Entrances</h3>
+                            <p class="text-sm text-gray-600">Exams like NID DAT and NIFT Entrance Exam for admission to premier design institutes.</p>
+                        </div>
+                    </div>
+                     <div class="flex space-x-4">
+                        <a href="https://admissions.nid.edu/" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-700 mt-4 self-start">NID Website &rarr;</a>
+                        <a href="https://www.nift.ac.in/" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-700 mt-4 self-start">NIFT Website &rarr;</a>
+                    </div>
+                </div>
+                <div class="section-card">
+                    <div class="flex items-start space-x-4 flex-grow">
+                        <div class="icon-wrapper !p-4 flex-shrink-0"><i data-lucide="utensils-crossed"></i></div>
+                        <div>
+                            <h3 class="font-bold">Hotel Management</h3>
+                            <p class="text-sm text-gray-600">The NCHM JEE is the main exam for admission to top hotel management institutes in India.</p>
+                        </div>
+                    </div>
+                    <a href="https://nchmjee.nta.nic.in/" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-700 mt-4 self-start">Visit Website &rarr;</a>
+                </div>
+                 <div class="section-card">
+                    <div class="flex items-start space-x-4 flex-grow">
+                        <div class="icon-wrapper !p-4 flex-shrink-0"><i data-lucide="book-user"></i></div>
+                        <div>
+                            <h3 class="font-bold">Teacher Eligibility Tests</h3>
+                            <p class="text-sm text-gray-600">After your B.Ed, exams like CTET are necessary for teaching jobs in government schools.</p>
+                        </div>
+                    </div>
+                    <a href="https://ctet.nic.in/" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-700 mt-4 self-start">Visit Website &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Plan -->
+        <section id="next-steps" class="py-16 fade-in">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <h2 class="text-4xl md:text-5xl font-bold">Your 3-Step Action Plan</h2>
+                <p class="mt-4 text-gray-600">Feeling motivated? Here’s how to get started right now.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="section-card">
+                    <div class="text-7xl font-extrabold text-indigo-100 mb-2">1</div>
+                    <h3 class="text-xl font-bold mb-2">Research & Shortlist</h3>
+                    <p class="text-gray-600">Explore the courses and colleges mentioned here. Make a list of your top 5 choices and learn everything you can about them.</p>
+                </div>
+                <div class="section-card">
+                    <div class="text-7xl font-extrabold text-indigo-100 mb-2">2</div>
+                    <h3 class="text-xl font-bold mb-2">Ace Your Exams</h3>
+                    <p class="text-gray-600">Create a study plan for your board exams and CUET. Focus on your strengths and work on your weaknesses. Consistency is key!</p>
+                </div>
+                <div class="section-card">
+                    <div class="text-7xl font-extrabold text-indigo-100 mb-2">3</div>
+                    <h3 class="text-xl font-bold mb-2">Seek Guidance</h3>
+                    <p class="text-gray-600">Talk to your teachers, career counselors, or seniors who are studying humanities. Their advice can be incredibly helpful.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="container mx-auto py-10 px-6 text-center">
+            <p class="font-bold text-2xl">Your Future Awaits</p>
+            <p class="text-sm text-gray-400 mt-2">&copy; 2025 Humanities Hub. Presented by Shrinu Varshney. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            const isMenuOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            
+            mobileMenuButton.innerHTML = isMenuOpen 
+                ? '<i data-lucide="menu" class="w-6 h-6"></i>' 
+                : '<i data-lucide="x" class="w-6 h-6"></i>';
+            lucide.createIcons();
+        });
+
+        // Active nav link highlighting on scroll
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('#nav-menu a');
+        const mobileNavLinks = document.querySelectorAll('#mobile-menu a');
+
+        const observer = new IntersectionObserver((entries) => {
+            let currentSectionId = '';
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    currentSectionId = entry.target.id;
+                }
+            });
+
+            if (currentSectionId) {
+                const allLinks = [...navLinks, ...mobileNavLinks];
+                allLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+        }, { threshold: 0.3, rootMargin: "-100px 0px -50% 0px" });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Fade-in animation on scroll
+        const fadeInElements = document.querySelectorAll('.fade-in');
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeInElements.forEach(el => {
+            fadeInObserver.observe(el);
+        });
+    </script>
+</body>
+</html>
