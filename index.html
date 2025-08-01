@@ -57,6 +57,27 @@
         main section[id] {
             scroll-margin-top: 5rem; 
         }
+        .roadmap-step {
+            @apply relative pl-10 border-l-2 border-indigo-200;
+        }
+        .roadmap-step::before {
+            content: '';
+            position: absolute;
+            left: -11px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border: 4px solid #6366f1;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .tab-button {
+            @apply px-4 py-3 font-semibold text-gray-600 rounded-lg transition-colors duration-300 whitespace-nowrap;
+        }
+        .tab-button.active {
+            @apply bg-indigo-600 text-white shadow-md;
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -72,7 +93,7 @@
             </a>
             <div class="hidden md:flex items-center space-x-6" id="nav-menu">
                 <a href="#why-humanities" class="nav-link">Why Humanities?</a>
-                <a href="#spotlight" class="nav-link">Career Spotlight</a>
+                <a href="#career-paths" class="nav-link">Career Paths</a>
                 <a href="#courses" class="nav-link">Top Courses</a>
                 <a href="#colleges" class="nav-link">Top Colleges</a>
                 <a href="#next-steps" class="nav-link">Next Steps</a>
@@ -85,7 +106,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-gray-200">
             <a href="#why-humanities" class="block nav-link text-left">Why Humanities?</a>
-            <a href="#spotlight" class="block nav-link text-left">Career Spotlight</a>
+            <a href="#career-paths" class="block nav-link text-left">Career Paths</a>
             <a href="#courses" class="block nav-link text-left">Top Courses</a>
             <a href="#colleges" class="block nav-link text-left">Top Colleges</a>
             <a href="#next-steps" class="block nav-link text-left">Next Steps</a>
@@ -131,27 +152,20 @@
             </div>
         </section>
         
-        <!-- Career Spotlight Section -->
-        <section id="spotlight" class="py-16 fade-in">
+        <!-- Career Paths & Roadmaps Section -->
+        <section id="career-paths" class="py-16 fade-in">
              <div class="text-center max-w-3xl mx-auto mb-14">
-                <h2 class="text-4xl md:text-5xl font-bold">Career Spotlight: Beyond the Obvious</h2>
-                <p class="mt-4 text-gray-600">Think humanities is just about teaching or research? Think again. Here are some cool, modern jobs where humanities grads excel.</p>
+                <h2 class="text-4xl md:text-5xl font-bold">Career Paths & Roadmaps</h2>
+                <p class="mt-4 text-gray-600">From the classroom to your dream job, here’s how you can get there.</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="section-card">
-                    <h3 class="font-bold text-lg mb-2">UX Writer</h3>
-                    <p class="text-gray-600 text-sm mb-3 flex-grow">Craft the words you see in apps and websites. You'll use your understanding of language and psychology to make technology easier and more enjoyable for everyone.</p>
-                    <span class="text-xs font-medium bg-green-100 text-green-800 px-2 py-1 rounded-full self-start">Skills: Empathy, Clear Writing</span>
+            <div class="section-card">
+                <div class="mb-8 overflow-x-auto">
+                    <div id="tabs-container" class="flex space-x-2 border-b border-gray-200">
+                        <!-- Tabs will be dynamically inserted here -->
+                    </div>
                 </div>
-                <div class="section-card">
-                    <h3 class="font-bold text-lg mb-2">Policy Analyst</h3>
-                    <p class="text-gray-600 text-sm mb-3 flex-grow">Work for the government or NGOs to research and improve our society. You'll use your critical thinking skills to help solve real-world problems.</p>
-                    <span class="text-xs font-medium bg-blue-100 text-blue-800 px-2 py-1 rounded-full self-start">Skills: Research, Analysis</span>
-                </div>
-                <div class="section-card">
-                    <h3 class="font-bold text-lg mb-2">Digital Marketer</h3>
-                    <p class="text-gray-600 text-sm mb-3 flex-grow">Use your understanding of culture and communication to create compelling online campaigns for brands. You'll tell stories that connect with people.</p>
-                    <span class="text-xs font-medium bg-purple-100 text-purple-800 px-2 py-1 rounded-full self-start">Skills: Creativity, Communication</span>
+                <div id="roadmaps-container">
+                    <!-- Roadmaps will be dynamically inserted here -->
                 </div>
             </div>
         </section>
@@ -401,6 +415,120 @@
                 : '<i data-lucide="x" class="w-6 h-6"></i>';
             lucide.createIcons();
         });
+
+        // Career Path Tabs Logic
+        const roadmapsData = [
+            {
+                title: 'Civil Services',
+                description: 'Serve the nation by becoming a part of its administrative backbone. This path requires dedication, deep knowledge, and a passion for public service.',
+                steps: [
+                    { title: 'Foundation (Class 11-12)', details: 'Focus on subjects like Political Science, History, and Economics. Start reading a national newspaper daily to build general awareness.' },
+                    { title: 'Graduation (B.A. Degree)', details: 'Choose a B.A. degree in a subject you enjoy, as it can be your optional paper. Deepen your understanding of current affairs and NCERT basics.' },
+                    { title: 'Exam Preparation (Final Year Onwards)', details: 'Begin focused preparation for the UPSC CSE exam. This involves covering the vast syllabus for Prelims and Mains, and practicing answer writing.' }
+                ]
+            },
+            {
+                title: 'Journalism & Media',
+                description: 'Be a storyteller for the digital age. This dynamic field includes reporting, content creation, public relations, and digital marketing.',
+                steps: [
+                    { title: 'Foundation (Class 11-12)', details: "Develop strong writing skills. Participate in debates, school magazines, and start a blog or a social media page on a topic you're passionate about." },
+                    { title: 'Graduation (BJMC / B.A. English)', details: 'Pursue a degree in Journalism, Mass Communication, or English. Actively seek internships at media houses, PR agencies, or digital marketing firms.' },
+                    { title: 'Build Your Portfolio (During & After College)', details: 'Create a collection of your best work—articles, videos, social media campaigns. Specialize in a niche (like tech, politics, or lifestyle) to stand out.' }
+                ]
+            },
+            {
+                title: 'Law',
+                description: 'Champion justice and navigate the legal system. A career in law is prestigious, intellectually stimulating, and offers diverse opportunities.',
+                steps: [
+                    { title: 'Entrance Exam (After Class 12)', details: 'Prepare for and crack the CLAT (Common Law Admission Test) or other law entrance exams for admission into top National Law Universities and other colleges.' },
+                    { title: 'Integrated Degree (B.A. LL.B.)', details: 'Enroll in a 5-year integrated law program. Participate in moot courts, debates, and internships at law firms or with lawyers to gain practical experience.' },
+                    { title: 'Bar Council Enrollment', details: 'After graduation, enroll with a State Bar Council and clear the All India Bar Examination (AIBE) to be eligible to practice law in India.' }
+                ]
+            },
+            {
+                title: 'Academia & Research',
+                description: 'Contribute to the world of knowledge as a professor or researcher. This path is for those with a deep curiosity and a love for learning.',
+                steps: [
+                    { title: 'Strong Foundation (B.A. Hons)', details: 'Excel in your chosen honors subject. Work closely with professors and develop a strong academic record.' },
+                    { title: 'Master\'s Degree (M.A.)', details: 'Deepen your specialization. This is often the time to start assisting in research and presenting papers at conferences.' },
+                    { title: 'Doctorate (Ph.D.)', details: 'Clear entrance exams like NET/JRF. A Ph.D. is essential for a tenure-track position as a professor in most universities.' }
+                ]
+            },
+            {
+                title: 'Digital Marketing',
+                description: 'Combine creativity with data to help brands grow online. This field is perfect for those who love communication and technology.',
+                steps: [
+                    { title: 'Build Skills (High School & College)', details: 'Start a blog, manage social media for a school club, and learn about SEO and Google Analytics through free online courses.' },
+                    { title: 'Relevant Degree & Internships', details: 'A degree in English, Communication, or Psychology is valuable. Gain practical experience through multiple internships.' },
+                    { title: 'Certifications & Specialization', details: 'Get certified in Google Ads, HubSpot, etc. Specialize in an area like SEO, content marketing, or social media marketing to increase your value.' }
+                ]
+            },
+             {
+                title: 'Design (UX/UI)',
+                description: 'Shape how people interact with technology. This creative field combines empathy, psychology, and visual design skills.',
+                steps: [
+                    { title: 'Learn the Basics', details: 'Start learning design principles and tools like Figma or Adobe XD through online tutorials. A background in Psychology is a huge plus.' },
+                    { title: 'Formal Education or Bootcamp', details: 'Pursue a B.Des degree or join a reputable UX/UI design bootcamp to build a strong foundation and portfolio.' },
+                    { title: 'Build a Portfolio & Network', details: 'Work on real or hypothetical projects to showcase your skills. Your portfolio is your most important asset. Network with designers online and attend meetups.' }
+                ]
+            }
+        ];
+
+        const tabsContainer = document.getElementById('tabs-container');
+        const roadmapsContainer = document.getElementById('roadmaps-container');
+
+        roadmapsData.forEach((roadmap, index) => {
+            // Create Tab Button
+            const tabButton = document.createElement('button');
+            tabButton.className = 'tab-button';
+            if (index === 0) tabButton.classList.add('active');
+            tabButton.textContent = roadmap.title;
+            tabButton.dataset.target = `roadmap-${index}`;
+            tabsContainer.appendChild(tabButton);
+
+            // Create Roadmap Content
+            const roadmapDiv = document.createElement('div');
+            roadmapDiv.id = `roadmap-${index}`;
+            roadmapDiv.className = 'roadmap-content';
+            if (index !== 0) roadmapDiv.classList.add('hidden');
+            
+            let stepsHtml = roadmap.steps.map(step => `
+                <div class="roadmap-step pb-8">
+                    <h4 class="font-semibold text-indigo-600">${step.title}</h4>
+                    <p class="text-sm text-gray-600 mt-1">${step.details}</p>
+                </div>
+            `).join('');
+            // Remove bottom padding from the last step
+            stepsHtml = stepsHtml.replace(/pb-8(?!.*pb-8)/, '');
+
+
+            roadmapDiv.innerHTML = `
+                <h3 class="text-2xl font-bold mb-2">${roadmap.title}</h3>
+                <p class="text-gray-600 mb-8">${roadmap.description}</p>
+                <div class="space-y-6">
+                    ${stepsHtml}
+                </div>
+            `;
+            roadmapsContainer.appendChild(roadmapDiv);
+        });
+
+        tabsContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('tab-button')) {
+                // Update tabs
+                tabsContainer.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+
+                // Update content
+                const targetId = e.target.dataset.target;
+                roadmapsContainer.querySelectorAll('.roadmap-content').forEach(content => {
+                    content.classList.add('hidden');
+                    if (content.id === targetId) {
+                        content.classList.remove('hidden');
+                    }
+                });
+            }
+        });
+
 
         // Active nav link highlighting on scroll
         const sections = document.querySelectorAll('main section[id]');
